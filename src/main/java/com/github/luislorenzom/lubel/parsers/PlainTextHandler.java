@@ -11,7 +11,6 @@ import com.github.luislorenzom.lubel.exceptions.DocumentHandlerException;
 
 public class PlainTextHandler implements DocumentHandler {
 
-	@Override
 	public Document getDocument(InputStream is) throws DocumentHandlerException {
 		Document doc = new Document();
 		// Index the content

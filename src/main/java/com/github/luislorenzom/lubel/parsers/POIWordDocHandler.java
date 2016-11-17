@@ -8,10 +8,7 @@ import com.github.luislorenzom.lubel.exceptions.DocumentHandlerException;
 
 public class POIWordDocHandler implements DocumentHandler {
 
-	@Override
 	public Document getDocument(InputStream is) throws DocumentHandlerException {
-		// TODO Auto-generated method stub
 		return null;
 	}
-
 }
