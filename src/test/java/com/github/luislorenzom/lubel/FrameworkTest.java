@@ -51,6 +51,11 @@ public class FrameworkTest {
 		rbc = Channels.newChannel(HTML.openStream());
 		fos = new FileOutputStream("tmp/HTML.html");
 		fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+		
+		URL DOC = new URL("http://www.snee.com/xml/xslt/sample.doc");
+		rbc = Channels.newChannel(DOC.openStream());
+		fos = new FileOutputStream("tmp/sample.doc");
+		fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
 	}
 	
 	@AfterClass
@@ -75,12 +80,13 @@ public class FrameworkTest {
 		
 		int numberOfFilesIndexed = indexer.index(indexDir, dataDir);
 		
-		assertEquals(numberOfFilesIndexed, 3);
+		assertEquals(numberOfFilesIndexed, 4);
 		
 		// Some random queries
 		String q1 = "TCP/IP infrastructure which allowed";
 		String q2 = "without having that information incorrectly";
 		String q3 = "sistema que facilitaba la lectura de información";
+		String q4 = "Heading1";
 		
 		int scores = searcher.search(indexDir, q1);
 		assertEquals(2, scores);
@@ -89,6 +95,9 @@ public class FrameworkTest {
 		assertEquals(2, scores);
 		
 		scores = searcher.search(indexDir, q3);
+		assertEquals(1, scores);
+		
+		scores = searcher.search(indexDir, q4);
 		assertEquals(1, scores);
 	}
 }

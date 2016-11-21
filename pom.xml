@@ -46,12 +46,6 @@
     <!--  -->
     
     <!-- Apache POI -->
-    <dependency>
-    	<groupId>org.apache.poi</groupId>
-    	<artifactId>poi</artifactId>
-    	<version>3.9</version>
-	</dependency>
-	
 	<dependency>
     	<groupId>poi</groupId>
     	<artifactId>poi-scratchpad</artifactId>

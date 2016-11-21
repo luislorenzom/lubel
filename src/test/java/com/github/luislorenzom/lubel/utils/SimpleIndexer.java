@@ -48,7 +48,8 @@ public class SimpleIndexer {
 			} else {
 				if ((file.getName().endsWith(".txt")) 
 						|| (file.getName().endsWith(".pdf")) 
-						|| (file.getName().endsWith(".html"))) {
+						|| (file.getName().endsWith(".html"))
+						|| (file.getName().endsWith(".doc"))) {
 					fileIndexer.index(writer, file);
 				}
 			}

@@ -20,6 +20,7 @@ fileIndexer.index(writer, fileToIndex);
 ## What kind of files are available?
 * Plain Text (*.txt)
 * PDF
+* HTML
 * Microsoft Word (*.doc)
 
 ## TO-DO
