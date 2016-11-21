@@ -1,10 +1,8 @@
 package com.github.luislorenzom.lubel.utils;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Properties;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -14,6 +12,7 @@ import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 
 import com.github.luislorenzom.lubel.FileIndexer;
+import com.github.luislorenzom.lubel.FileIndexerFactory;
 import com.github.luislorenzom.lubel.exceptions.FileHandlerException;
 
 public class SimpleIndexer {
@@ -41,9 +40,7 @@ public class SimpleIndexer {
 	public void indexDirectory(IndexWriter writer, File dataDir) 
 			throws FileNotFoundException, IOException, FileHandlerException {
 		File[] files = dataDir.listFiles();
-		Properties props = new Properties();
-		props.load(new FileInputStream("src/main/java/com/github/luislorenzom/lubel/handler.properties"));
-		FileIndexer fileIndexer = new FileIndexer(props);
+		FileIndexer fileIndexer = FileIndexerFactory.getFileIndexer();
 		
 		for (File file : files) {
 			if (file.isDirectory()) {

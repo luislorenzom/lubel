@@ -7,7 +7,7 @@ import com.github.luislorenzom.lubel.exceptions.FileHandlerException;
 
 
 
-public interface FileHandler {
+interface FileHandler {
 	
 	/** 
 	 * Creates a Lucene Document from a file.

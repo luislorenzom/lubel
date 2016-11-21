@@ -18,7 +18,7 @@ import com.github.luislorenzom.lubel.parsers.DocumentHandler;
  * appropriate DocumentHandler implementations, based on a file
  * extension.
  */
-public class ExtensionFileHandler implements FileHandler {
+class ExtensionFileHandler implements FileHandler {
 	private Properties handlerProps;
 	
 	
