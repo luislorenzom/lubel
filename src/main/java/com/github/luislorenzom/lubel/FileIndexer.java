@@ -30,22 +30,22 @@ public class FileIndexer {
 				for (int i = 0; i < file.length(); i++) {
 					index(writer, new File(file, files[i]));
 				}
-			}
-		} else {
-			System.out.println("Indexing " + file);
-			try {
-				Document doc = fileHandler.getDocument(file);
-				// Hands of files to ExtensionFileHandler
-				if (doc != null) {
-					// Add returned Lucene Document to index
-					writer.addDocument(doc);
-				} else {
+			} else {
+				System.out.println("Indexing " + file);
+				try {
+					Document doc = fileHandler.getDocument(file);
+					// Hands of files to ExtensionFileHandler
+					if (doc != null) {
+						// Add returned Lucene Document to index
+						writer.addDocument(doc);
+					} else {
+						System.err.println("Cannot handle " + file.getAbsolutePath()
+							+ "; skipping");
+					}
+				} catch (IOException e) {
 					System.err.println("Cannot handle " + file.getAbsolutePath()
-						+ "; skipping");
+					+ "; skipping");
 				}
-			} catch (IOException e) {
-				System.err.println("Cannot handle " + file.getAbsolutePath()
-				+ "; skipping");
 			}
 		}
 	}

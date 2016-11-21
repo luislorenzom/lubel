@@ -14,7 +14,7 @@ public class JsoupHTMLHandler implements DocumentHandler {
 
 	public Document getDocument(InputStream is) throws DocumentHandlerException {
 		try {
-			org.jsoup.nodes.Document htmlDoc = Jsoup.parse(is,null,null);
+			org.jsoup.nodes.Document htmlDoc = Jsoup.parse(is,null,"baseuri");
 			// Get full text
 			String plainText = htmlDoc.select("body").text();
 			Document doc = new Document();
