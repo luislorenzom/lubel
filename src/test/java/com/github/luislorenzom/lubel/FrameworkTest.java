@@ -56,6 +56,11 @@ public class FrameworkTest {
 		rbc = Channels.newChannel(DOC.openStream());
 		fos = new FileOutputStream("tmp/sample.doc");
 		fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+		
+		URL DOCX = new URL("http://calibre-ebook.com/downloads/demos/demo.docx");
+		rbc = Channels.newChannel(DOCX.openStream());
+		fos = new FileOutputStream("tmp/DOCX.docx");
+		fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
 	}
 	
 	@AfterClass
@@ -80,13 +85,14 @@ public class FrameworkTest {
 		
 		int numberOfFilesIndexed = indexer.index(indexDir, dataDir);
 		
-		assertEquals(numberOfFilesIndexed, 4);
+		assertEquals(numberOfFilesIndexed, 5);
 		
 		// Some random queries
 		String q1 = "TCP/IP infrastructure which allowed";
 		String q2 = "without having that information incorrectly";
 		String q3 = "sistema que facilitaba la lectura de información";
 		String q4 = "Heading1";
+		String q5 = "AZW3";
 		
 		int scores = searcher.search(indexDir, q1);
 		assertEquals(2, scores);
@@ -98,6 +104,9 @@ public class FrameworkTest {
 		assertEquals(1, scores);
 		
 		scores = searcher.search(indexDir, q4);
+		assertEquals(1, scores);
+		
+		scores = searcher.search(indexDir, q5);
 		assertEquals(1, scores);
 	}
 }

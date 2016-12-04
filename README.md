@@ -21,12 +21,11 @@ fileIndexer.index(writer, fileToIndex);
 * Plain Text (*.txt)
 * PDF
 * HTML
-* Microsoft Word (*.doc)
+* Microsoft Word (\*.doc) and (*.docx)
 
 ## TO-DO
-* For Microsoft Word 2007 onwards (*.docx)
-* PowerPoint files (*.ppt) or (*.pptx)
-* Excel files (*.xls) or (*.xlsx)
+* PowerPoint files (\*.ppt) or (*.pptx)
+* Excel files (\*.xls) or (*.xlsx)
 * ePub
 * XML
 * JSON
