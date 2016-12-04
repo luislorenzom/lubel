@@ -1,0 +1,6 @@
+languaje: java
+jdk: oraclejdk8
+only:
+    - master
+script:
+    - mvn test
