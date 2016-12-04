@@ -2,7 +2,7 @@
 Lubel is multi-type file handler to obtain Apache Lucene Documents from different source files, trying to abstract the developer from the task of documents parsing.
 
 ## How to use it?
-First of all you need to include lubel on your project. After that, you just need to instance the FileIndexer class in your code, in this way:
+First of all you need to include lubel in your project. After that, you just need to instance the FileIndexer class in your code in this way:
 
 ```java
 // All your previous code...
@@ -17,7 +17,7 @@ fileIndexer.index(writer, fileToIndex);
 // More code...
 ```
 
-## What kind of files are available?
+## What file types are available?
 * Plain Text (*.txt)
 * PDF
 * HTML
@@ -29,4 +29,5 @@ fileIndexer.index(writer, fileToIndex);
 * ePub
 * XML
 * JSON
-* LibreOffice/OpenOffice (*.odt)
+* LibreOffice/OpenOffice writer (*.odt)
+* HTML parser optimization
