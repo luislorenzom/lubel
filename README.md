@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/luislorenzom/lubel.svg?token=YocqqhpYyq52H3KH8Q6h&branch=master)](https://travis-ci.com/luislorenzom/lubel)
+
 ## What is lubel?
 Lubel is multi-type file handler to obtain Apache Lucene Documents from different source files, trying to abstract the developer from the task of documents parsing.
 
