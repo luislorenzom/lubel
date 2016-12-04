@@ -13,7 +13,6 @@ import com.github.luislorenzom.lubel.exceptions.DocumentHandlerException;
 
 public class POIWordDocxHandler implements DocumentHandler{
 
-	@Override
 	public Document getDocument(InputStream is) throws DocumentHandlerException {
 		XWPFDocument document;
 		try {

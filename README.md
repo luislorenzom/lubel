@@ -24,9 +24,10 @@ fileIndexer.index(writer, fileToIndex);
 * PDF
 * HTML
 * Microsoft Word (\*.doc) and (*.docx)
+* Microsoft PowerPoint (\*.ppt)
 
 ## TO-DO
-* PowerPoint files (\*.ppt) or (*.pptx)
+* PowerPoint files (*.pptx)
 * Excel files (\*.xls) or (*.xlsx)
 * ePub
 * XML

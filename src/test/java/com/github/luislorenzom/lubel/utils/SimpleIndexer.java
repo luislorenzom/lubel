@@ -50,7 +50,8 @@ public class SimpleIndexer {
 						|| (file.getName().endsWith(".pdf")) 
 						|| (file.getName().endsWith(".html"))
 						|| (file.getName().endsWith(".doc"))
-						|| (file.getName().endsWith(".docx"))) {
+						|| (file.getName().endsWith(".docx"))
+						|| (file.getName().endsWith(".ppt"))) {
 					fileIndexer.index(writer, file);
 				}
 			}
