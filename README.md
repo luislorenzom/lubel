@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.com/luislorenzom/lubel.svg?token=YocqqhpYyq52H3KH8Q6h&branch=master)](https://travis-ci.com/luislorenzom/lubel)
 
 ## What is lubel?
-Lubel is multi-type file handler to obtain Apache Lucene Documents from different source files, trying to abstract the developer from the task of documents parsing.
+Lubel is a multi-type file handler to obtain Apache Lucene Documents from different source files, trying to abstract the developer from the task of documents parsing.
 
 ## How to use it?
-First of all you need to include lubel in your project. After that, you just need to instance the FileIndexer class in your code in this way:
+First of all you need to include lubel in your project (compiling or adding it through Maven). After that, you just need to instance the fileIndexer class in your code in this way:
 
 ```java
 // All your previous code...
