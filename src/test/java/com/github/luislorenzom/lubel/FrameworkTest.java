@@ -101,7 +101,7 @@ public class FrameworkTest {
 		String q6 = "mandamiento";
 		
 		int scores = searcher.search(indexDir, q1);
-		assertEquals(2, scores);
+		assertEquals(3, scores);
 		
 		scores = searcher.search(indexDir, q2);
 		assertEquals(2, scores);
