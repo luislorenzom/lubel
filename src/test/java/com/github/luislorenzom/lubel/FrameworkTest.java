@@ -107,7 +107,7 @@ public class FrameworkTest {
 		assertEquals(2, scores);
 		
 		scores = searcher.search(indexDir, q3);
-		assertEquals(2, scores);
+		assertEquals(3, scores);
 		
 		scores = searcher.search(indexDir, q4);
 		assertEquals(1, scores);
